@@ -1,0 +1,133 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/johnsundell/codextended.git",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/johnsundell/files.git",
+        "state": {
+          "branch": null,
+          "revision": "d273b5b7025d386feef79ef6bad7de762e106eaf",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "state": {
+          "branch": null,
+          "revision": "77c3d8953374a9cf5418ef0bd7108524999de85a",
+          "version": "0.5.1"
+        }
+      },
+      {
+        "package": "JavaScriptKit",
+        "repositoryURL": "https://github.com/swiftwasm/JavaScriptKit.git",
+        "state": {
+          "branch": null,
+          "revision": "309e63c03d8116210ad0437f5d1f09a26d4de48b",
+          "version": "0.11.1"
+        }
+      },
+      {
+        "package": "OpenCombine",
+        "repositoryURL": "https://github.com/OpenCombine/OpenCombine.git",
+        "state": {
+          "branch": null,
+          "revision": "28993ae57de5a4ea7e164787636cafad442d568c",
+          "version": "0.12.0"
+        }
+      },
+      {
+        "package": "OpenCombineJS",
+        "repositoryURL": "https://github.com/swiftwasm/OpenCombineJS.git",
+        "state": {
+          "branch": null,
+          "revision": "f1f1799ddbb9876a0ef8c5700a3b78d352d0b969",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "Plot",
+        "repositoryURL": "https://github.com/johnsundell/plot.git",
+        "state": {
+          "branch": null,
+          "revision": "c27f6857deeb4c4623db294172a8ec572790a9be",
+          "version": "0.10.0"
+        }
+      },
+      {
+        "package": "Publish",
+        "repositoryURL": "https://github.com/johnsundell/publish.git",
+        "state": {
+          "branch": null,
+          "revision": "1402af3cbe18df03fb6df701fdcf51471f98d0ff",
+          "version": "0.8.0"
+        }
+      },
+      {
+        "package": "ShellOut",
+        "repositoryURL": "https://github.com/johnsundell/shellout.git",
+        "state": {
+          "branch": null,
+          "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+          "version": "2.3.0"
+        }
+      },
+      {
+        "package": "Sweep",
+        "repositoryURL": "https://github.com/johnsundell/sweep.git",
+        "state": {
+          "branch": null,
+          "revision": "801c2878e4c6c5baf32fe132e1f3f3af6f9fd1b0",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "6b2aa2748a7881eebb9f84fb10c01293e15b52ca",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "Benchmark",
+        "repositoryURL": "https://github.com/google/swift-benchmark",
+        "state": {
+          "branch": null,
+          "revision": "a0564bf88df5f94eec81348a2f089494c6b28d80",
+          "version": "0.1.1"
+        }
+      },
+      {
+        "package": "Tokamak",
+        "repositoryURL": "https://github.com/TokamakUI/Tokamak.git",
+        "state": {
+          "branch": null,
+          "revision": "32616fe9d4d8dcdd6a48519e2ce8d7b0ba744434",
+          "version": "0.9.0"
+        }
+      },
+      {
+        "package": "TokamakPublish",
+        "repositoryURL": "https://github.com/baguio/TokamakPublish.git",
+        "state": {
+          "branch": "main",
+          "revision": "282c41df2dba2022bd2835f69e916584a06d67ab",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
