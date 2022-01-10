@@ -181,6 +181,12 @@ extension Theme where Site == Blog {
                     Text("Tokamak")
                         .underline()
                 }
+                Text(", hosted and built using")
+                        .padding(0)
+                Link(destination: URL(string: "https://github.com/baguio/blog")!) {
+                    Text("Github")
+                        .underline()
+                }
             }
             .foregroundColor(secondaryTextColor)
         }
