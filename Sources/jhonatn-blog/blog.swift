@@ -10,8 +10,8 @@ struct Blog: Website {
     
     struct ItemMetadata: WebsiteItemMetadata {}
     
-    var url = URL(string: "https://blog.jhona.tn")!
-    var name = "jhona.tn"
+    var url = URL(string: "https://jhona.tn/blog")!
+    var name = "jhona.tn: Blog"
     var description = "A tech experimentation blog"
     var language: Language { .english }
     var imagePath: Publish.Path? { nil }
@@ -95,7 +95,7 @@ extension Theme where Site == Blog {
                 .font(.headline)
                 Link(
                     "Browse all tags",
-                    destination: URL(string: context.site.tagListPath.absoluteString, relativeTo: context.site.url)!
+                    destination: context.site.generateURL(for: context.site.tagListPath.absoluteString)
                 )
                 ItemList(
                     items: context.items(
@@ -121,7 +121,7 @@ extension Theme where Site == Blog {
             VStack(alignment: .leading) {
                 ForEach(items) { item in
                     VStack(alignment: .leading) {
-                        Link(destination: URL(string: item.path.absoluteString, relativeTo: site.url)!) {
+                        Link(destination: site.generateURL(for: item.path.absoluteString)) {
                             Text(item.title)
                                 .font(.headline)
                         }
@@ -155,7 +155,7 @@ extension Theme where Site == Blog {
         var body: some View {
             Link(
                 context.site.name,
-                destination: URL(string: "/", relativeTo: context.site.url)!
+                destination: context.site.url
             )
                 .font(.system(size: 64, weight: .bold))
                 .foregroundColor(secondaryTextColor)
@@ -191,7 +191,7 @@ extension Theme where Site == Blog {
         let site: Site
         
         var body: some View {
-            Link(destination: URL(string: site.path(for: tag).absoluteString, relativeTo: site.url)!) {
+            Link(destination: site.generateURL(for: site.path(for: tag).absoluteString)) {
                 Text(tag.string)
                     .padding(.horizontal, 6)
                     .padding(.vertical, 4)
@@ -200,5 +200,11 @@ extension Theme where Site == Blog {
                     .cornerRadius(5)
             }
         }
+    }
+}
+
+extension Website {
+    func generateURL(for path: String) -> URL {
+        url.appendingPathComponent(path)
     }
 }
