@@ -1,0 +1,33 @@
+name: Publish
+on: 
+  push:
+    branches: [ main ]
+jobs:
+  publish:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'main'
+          path: 'source'
+      - name: Generate from source
+        run: cd source; swift run
+      - name: Prepare contents to publish
+        run: |
+          cd ..
+          mv ./source/Output/ .
+          rm -r ./source/
+      - uses: actions/checkout@v2
+        with:
+          ref: 'generated'
+          path: 'generated'
+      - name: Publish
+        run: |
+          cd generated
+          find . -type d -not -ipath "./.git*" -delete
+          mv ../Output/* .
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Generated automatically based on $GITHUB_SHA" -a
+          git push origin
+      - run: echo "Published!"
