@@ -9,7 +9,5 @@ import Publish
 
 try Blog().publish(
     withTheme: .blog,
-    at: "docs",
-    rssFeedSections: [],
-    deployedUsing: .git("git@github.com:baguio/blog.git", branch: "generated")
+    rssFeedSections: []
 )
