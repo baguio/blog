@@ -65,15 +65,6 @@
         }
       },
       {
-        "package": "Publish",
-        "repositoryURL": "https://github.com/johnsundell/publish.git",
-        "state": {
-          "branch": null,
-          "revision": "1402af3cbe18df03fb6df701fdcf51471f98d0ff",
-          "version": "0.8.0"
-        }
-      },
-      {
         "package": "ShellOut",
         "repositoryURL": "https://github.com/johnsundell/shellout.git",
         "state": {
@@ -120,10 +111,10 @@
       },
       {
         "package": "TokamakPublish",
-        "repositoryURL": "https://github.com/baguio/TokamakPublish.git",
+        "repositoryURL": "https://github.com/TokamakUI/TokamakPublish.git",
         "state": {
-          "branch": "main",
-          "revision": "282c41df2dba2022bd2835f69e916584a06d67ab",
+          "branch": null,
+          "revision": "e0549e9fef96574958f4234f61b01cc008d7ae99",
           "version": null
         }
       }
