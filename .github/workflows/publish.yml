@@ -6,17 +6,15 @@ jobs:
   publish:
     runs-on: macos-11
     steps:
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '13.0'
       - uses: actions/checkout@v2
         with:
           ref: 'main'
           path: 'source'
       - name: Generate from source
-        run: cd source; swift run
-      - name: Prepare contents to publish
-        run: |
-          cd ..
-          mv ./source/Output/ .
-          rm -r ./source/
+        run: cd source; swift run; cd ..
       - uses: actions/checkout@v2
         with:
           ref: 'generated'
@@ -25,9 +23,10 @@ jobs:
         run: |
           cd generated
           find . -type d -not -ipath "./.git*" -delete
-          mv ../Output/* .
+          mv ../source/Output/* .
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "Generated automatically based on $GITHUB_SHA" -a
+          git add --all
+          git commit -m "Generated automatically based on $GITHUB_SHA"
           git push origin
       - run: echo "Published!"
