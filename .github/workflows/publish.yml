@@ -14,7 +14,10 @@ jobs:
           ref: 'main'
           path: 'source'
       - name: Generate from source
-        run: cd source; swift run; cd ..
+        run: |
+          cd source
+          swift run
+          cd ..
       - uses: actions/checkout@v2
         with:
           ref: 'generated'
@@ -22,11 +25,10 @@ jobs:
       - name: Publish
         run: |
           cd generated
-          find . -type d -not -ipath "./.git*" -delete
+          find . -not -ipath "./.git*" -delete
           mv ../source/Output/* .
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add --all
-          git commit -m "Generated automatically based on $GITHUB_SHA"
+          git commit -m "Generated automatically based on commit $GITHUB_SHA"
           git push origin
-      - run: echo "Published!"
